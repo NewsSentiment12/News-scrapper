@@ -1,7 +1,20 @@
 import requests
+import json
+import numpy as np
 from newspaper import Article
 import feedparser
 import pandas as pd
+import nltk 
+import matplotlib
+from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
+from string import punctuation
+import re
+import numpy as np
+from nltk.tokenize import RegexpTokenizer
+from nltk.stem import WordNetLemmatizer
+from rake_nltk import Rake 
+from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
 
 def get_news_links(query, num_results=5):
     query = query.replace(" ", "%20")  # URL-encode spaces
