@@ -94,8 +94,6 @@ def clean_text(text):
 def remove_stopwords(word_tokens):
     filtered_sentence = [] 
     stop_words = stopwords.words('english')
-    specific_words_list = ['char', 'u', 'hindustan', 'doj', 'washington'] 
-    stop_words.extend(specific_words_list )
     for w in word_tokens: 
         if w not in stop_words: 
             filtered_sentence.append(w) 
