@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+
+<body>
+    <h1>Sentiment Analysis Results</h1>
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Sentiment</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.title }}</td>
+            <td>{{ item.content }}</td>
+            <td>{{ item.sentiment }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
